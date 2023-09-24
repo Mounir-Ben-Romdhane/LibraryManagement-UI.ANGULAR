@@ -1,0 +1,21 @@
+:host {
+  display: block;
+  width: 80%;
+  margin: 3rem auto 0;
+}
+
+table {
+  width: 100%;
+
+  .action-group {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mat-mdc-header-cell {
+    font-style: italic;
+    color: rgb(118, 248, 168);
+  }
+}
+

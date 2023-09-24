@@ -1,0 +1,16 @@
+:host {
+  display: block;
+  margin: 3rem auto 0;
+  width: 80%;
+}
+
+table {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+th {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: rgb(118, 248, 168);
+}

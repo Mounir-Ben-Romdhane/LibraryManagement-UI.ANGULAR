@@ -1,0 +1,31 @@
+<mat-toolbar>
+    <button mat-icon-button (click)="menuClicked.emit()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <h1>Library Manager System</h1>
+
+    <div class="user-info">
+      <span>
+        Hi,
+        {{fullName}}
+      </span>
+      <button mat-icon-button [matMenuTriggerFor]="userMenu">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+    </div>
+
+    <mat-menu #userMenu="matMenu">
+        <button mat-menu-item routerLink="/login">
+            <mat-icon>login</mat-icon>
+            <span>Login</span>
+        </button>
+        <button mat-menu-item routerLink="/users/profile">
+          <mat-icon>account_box</mat-icon>
+          <span>Profile</span>
+      </button>
+      <button mat-menu-item (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        <span>Log Out</span>
+    </button>
+    </mat-menu>
+</mat-toolbar>

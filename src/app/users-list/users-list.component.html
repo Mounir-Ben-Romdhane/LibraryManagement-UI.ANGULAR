@@ -1,0 +1,85 @@
+<h1>All Users of this Library</h1>
+
+<table mat-table [dataSource]="users">
+
+    <!-- ID Column
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>-->
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>User Name</th>
+        <td mat-cell *matCellDef="let element"> {{element.firstName + " " + element.lastName}} </td>
+    </ng-container>
+
+    <!-- UserName Column -->
+    <ng-container matColumnDef="userName">
+      <th mat-header-cell *matHeaderCellDef>User Name</th>
+      <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+  </ng-container>
+
+    <!-- Email Column -->
+    <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>Email</th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+    </ng-container>
+
+    <!-- Mobile Column -->
+    <ng-container matColumnDef="mobile">
+        <th mat-header-cell *matHeaderCellDef>Mobile</th>
+        <td mat-cell *matCellDef="let element"> {{element.mobile}} </td>
+    </ng-container>
+
+    <!-- Fine Column -->
+    <ng-container matColumnDef="fine">
+        <th mat-header-cell *matHeaderCellDef>Fine</th>
+        <td mat-cell *matCellDef="let element"> {{element.fine}} </td>
+    </ng-container>
+
+    <!-- Blocked Column -->
+    <ng-container matColumnDef="blocked">
+        <th mat-header-cell *matHeaderCellDef>Blocked</th>
+        <td mat-cell *matCellDef="let element">
+            {{element.blocked ? "Blocked" : "Not Blocked"}}
+        </td>
+    </ng-container>
+
+    <!-- Active Column -->
+    <ng-container matColumnDef="active">
+        <th mat-header-cell *matHeaderCellDef>Active</th>
+        <td mat-cell *matCellDef="let element"> {{element.active ? "Active" : "Not Active"}} </td>
+    </ng-container>
+
+    <!-- CreatedOn Column -->
+    <ng-container matColumnDef="createdOn">
+        <th mat-header-cell *matHeaderCellDef>Created On</th>
+        <td mat-cell *matCellDef="let element"> {{element.createdOn}} </td>
+    </ng-container>
+
+    <!-- CreatedOn Column -->
+    <ng-container matColumnDef="role">
+      <th mat-header-cell *matHeaderCellDef>Role</th>
+      <td mat-cell *matCellDef="let element"> {{element.role.roleName}} </td>
+    </ng-container>
+
+    <!-- Action Column -->
+    <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef>Action</th>
+        <td mat-cell *matCellDef="let element">
+            <div class="action-group">
+                <button mat-flat-button color="accent" (click)="blockUser(element)">
+                    {{element.blocked ? "Unblock" : "Block"}}
+                </button>
+                <button mat-flat-button color="accent" (click)="enableUser(element)">
+                    {{element.active ? "Disable" : "Enable"}}
+                </button>
+            </div>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+
+</table>

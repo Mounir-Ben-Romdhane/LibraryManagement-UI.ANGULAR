@@ -1,0 +1,51 @@
+:host {
+  display: block;
+  padding: 2rem 3rem;
+}
+
+mat-form-field {
+  width: 500px;
+  margin: 0 auto;
+  display: block;
+  transform: scale(1.3);
+}
+
+mat-card {
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+mat-card-content {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+mat-panel-title {
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: rgb(133, 239, 133);
+}
+
+mat-panel-description {
+  font-style: italic;
+  letter-spacing: 1px;
+  color: rgb(217, 235, 217);
+}
+
+table {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  mat-cell {
+    font-size: 2.5rem;
+}
+}
+
+
+th {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: rgb(118, 248, 168);
+}

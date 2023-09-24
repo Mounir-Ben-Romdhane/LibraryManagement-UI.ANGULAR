@@ -1,0 +1,12 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  background-color: #309c69;
+  height: 3rem;
+}
+
+h3, h4{
+  margin: 0;
+}

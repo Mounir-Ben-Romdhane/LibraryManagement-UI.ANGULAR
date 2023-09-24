@@ -1,0 +1,5 @@
+@use "@angular/material" as mat;
+
+@include mat.core();
+
+$light-primary: mat.define-palette(mat.$purple-palatte);

@@ -1,0 +1,45 @@
+:host {
+  display: flex;
+  width: 80%;
+  gap: 2rem;
+  margin: 3rem auto;
+  flex-direction: column;
+  align-items: flex-start;
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+  button {
+    width: 200px;
+    height: 50px;
+  }
+
+
+  mat-card-content {
+    margin: 0;
+    mat-form-field {
+      width: 100%;
+    }
+  }
+  mat-card-actions {
+    button {
+      width: 100%;
+    }
+  }
+
+  th {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: rgb(118, 248, 168);
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }

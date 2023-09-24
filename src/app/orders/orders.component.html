@@ -1,0 +1,50 @@
+<h1>All Orders</h1>
+
+<mat-button-toggle-group #actions="matButtonToggleGroup">
+    <mat-button-toggle value="all" (change)="filter(actions.value)" checked>All</mat-button-toggle>
+    <mat-button-toggle value="pen" (change)="filter(actions.value)">Pending</mat-button-toggle>
+    <mat-button-toggle value="ret" (change)="filter(actions.value)">Returned</mat-button-toggle>
+</mat-button-toggle-group>
+
+<table mat-table [dataSource]="ordersToDisplay">
+
+    <!-- Book Id-->
+    <ng-container matColumnDef="userId">
+        <th mat-header-cell *matHeaderCellDef>User Id</th>
+        <td mat-cell *matCellDef="let element"> {{element.userId}} </td>
+    </ng-container>
+
+    <!-- Name -->
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Users Name</th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <!-- Book Id -->
+    <ng-container matColumnDef="livreId">
+        <th mat-header-cell *matHeaderCellDef>Book Id</th>
+        <td mat-cell *matCellDef="let element"> {{element.livreId}} </td>
+    </ng-container>
+
+    <!-- Book -->
+    <ng-container matColumnDef="bookName">
+        <th mat-header-cell *matHeaderCellDef>Book Name</th>
+        <td mat-cell *matCellDef="let element"> {{element.bookName}} </td>
+    </ng-container>
+
+    <!-- Date -->
+    <ng-container matColumnDef="orderDate">
+        <th mat-header-cell *matHeaderCellDef>Order Date</th>
+        <td mat-cell *matCellDef="let element"> {{element.orderDate | date:'dd-MMM-YYYY'}} </td>
+    </ng-container>
+
+    <!-- Returned -->
+    <ng-container matColumnDef="returned">
+        <th mat-header-cell *matHeaderCellDef>Return Status</th>
+        <td mat-cell *matCellDef="let element"> {{element.returned ? "Yes" : "No"}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columns"></tr>
+    <tr mat-row *matRowDef="let row; columns: columns"></tr>
+
+</table>
